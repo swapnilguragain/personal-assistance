@@ -1,0 +1,22 @@
+<resources  xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="app_name">Personal Assistant</string>
+    <string name="today">Today</string>
+    <string name="time">Time</string>
+    <string-array name="types">
+        <item>Meeting</item>
+        <item>Clearence</item>
+        <item>Inquiry</item>
+        <item>Meeting</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>Meeting</item>
+        <item>Clearence</item>
+        <item>Inquiry</item>
+        <item>Meeting</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>
