@@ -38,14 +38,6 @@ public class Work extends Fragment implements DatePickerDialog.OnDateSetListener
     Spinner type, before_time;
     Button button;
 
-    private boolean firstTimeLoad = false;
-
-    private String[] columnProjection = new String[]{
-            ContactsContract.Contacts.DISPLAY_NAME_PRIMARY,
-            ContactsContract.Contacts.CONTACT_STATUS,
-            ContactsContract.Contacts.HAS_PHONE_NUMBER
-    };
-
     int remainder;
     String typeSelected;
 
@@ -187,14 +179,9 @@ public class Work extends Fragment implements DatePickerDialog.OnDateSetListener
                         .check();
             case R.id.submit: {
                 CreateWork createWork = new CreateWork();
-                createWork.addWorkToServer(tittle.getText().toString(), description.getText().toString(), date.getInputType(), time.getInputType(), contact.toString(), typeSelected, remainder);
-
             }
         }
     }
-
-
-
 
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         Calendar calendar = Calendar.getInstance();

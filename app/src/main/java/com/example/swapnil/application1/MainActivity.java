@@ -13,44 +13,46 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    FragmentManager manager;
+//    FragmentManager manager;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        manager = getSupportFragmentManager();
-
-        final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.mainDrawer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
-
-        setSupportActionBar(toolbar);
-
-        ActionBarDrawerToggle drawerToogle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
-        drawerLayout.addDrawerListener(drawerToogle);
-        drawerToogle.syncState();
-
-        manager.beginTransaction().replace(R.id.fragmentHolder, new Home()).commit();
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.addwork:
-                        manager.beginTransaction().replace(R.id.fragmentHolder, new Work()).commit();
-                        break;
-                }
-
-                drawerLayout.closeDrawers();
-                return true;
-            }
-        });
-        }
-
+//        manager = getSupportFragmentManager();
+//
+//        final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.mainDrawer);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
+//
+//        setSupportActionBar(toolbar);
+//
+//        ActionBarDrawerToggle drawerToogle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
+//        drawerLayout.addDrawerListener(drawerToogle);
+//        drawerToogle.syncState();
+//
+//        manager.beginTransaction().replace(R.id.fragmentHolder, new Home()).commit();
+//
+//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
+//
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.addwork:
+//                        manager.beginTransaction().replace(R.id.fragmentHolder, new Work()).commit();
+//                        break;
+//                }
+//
+//                drawerLayout.closeDrawers();
+//                return true;
+//            }
+//        });
 
 
+
+    }
 
 }
